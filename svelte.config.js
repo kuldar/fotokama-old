@@ -3,8 +3,8 @@ import adapter from '@sveltejs/adapter-netlify'
 
 const config = {
   kit: {
-    target: '#svelte',
-    adapter: adapter({})
+    adapter: adapter(),
+    target: '#svelte'
   },
   preprocess: [preprocess({ 'postcss': true })]
 }
