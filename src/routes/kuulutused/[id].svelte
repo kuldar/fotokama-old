@@ -27,12 +27,14 @@
 </script>
 
 <!-- Header -->
-<header class="max-w-6xl mx-auto px-4">
-  <Nav active={`/kuulutused/${categorySlugs[listing.category]}`}/>
+<header class="bg-black">
+  <div class="max-w-6xl mx-auto px-4">
+    <Nav active={`/kuulutused/${categorySlugs[listing.category]}`}/>
+  </div>
 </header>
 
 <!-- Listing -->
-<div class="bg-gray-800 border-t border-gray-700 mt-2">
+<div class="bg-gray-800 border-t border-gray-700">
   <div class="max-w-6xl mx-auto px-4">
 
     <!-- Name & Price -->

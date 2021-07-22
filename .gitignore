@@ -3,4 +3,5 @@
 /node_modules
 /package
 /.svelte-kit
-/.netlify
+/build
+/functions
