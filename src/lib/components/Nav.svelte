@@ -1,12 +1,17 @@
 <script>
   import { page } from '$app/stores'
+  export let active
+
+  function isActive(path) {
+    return $page.path === path || active === path
+  }
 </script>
 
 <!-- Header -->
 <header class="py-4 flex items-center justify-between">
 
   <!-- Logo -->
-  <a href="/" class="relative -top-1 transition-colors text-gray-600 hover:text-gray-200">
+  <a href="/" class="relative -top-1 transition-colors text-gray-500 hover:text-gray-200">
     <svg class="h-7" viewBox="0 0 233 49" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M60.6372 16.2008C61.8268 14.6178 63.711 13.6323 65.6647 13.411C67.33 13.2172 69.0841 13.2422 70.6547 13.8889C70.6524 15.7321 70.6524 17.5741 70.6547 19.4161C69.7217 18.9131 68.5903 18.8116 67.5672 19.0511C66.4894 19.3214 65.7081 20.3194 65.594 21.4075C65.4982 22.3747 65.5735 23.3499 65.5507 24.3205C67.1087 24.3205 68.6667 24.3205 70.2247 24.3205C70.2247 26.0929 70.2247 27.8653 70.2247 29.6377C68.6667 29.6389 67.1087 29.6377 65.5495 29.6389C65.5495 35.2276 65.5495 40.8163 65.5495 46.4062C63.3483 46.4062 61.147 46.4062 58.9457 46.4062C58.9457 40.8163 58.9457 35.2276 58.9457 29.6389C57.7881 29.6377 56.6304 29.6389 55.4727 29.6377C55.4705 27.8653 55.475 26.0929 55.4705 24.3205C56.6281 24.3193 57.7869 24.3205 58.9457 24.3205C58.9549 23.2118 58.9286 22.1021 58.9583 20.9946C59.0746 19.2918 59.5331 17.541 60.6372 16.2008Z" fill="currentColor" />
       <path d="M134.298 13.8137C136.514 13.8137 138.729 13.8137 140.945 13.8137C140.945 20.4893 140.945 27.1662 140.945 33.8418C143.43 30.6677 145.92 27.4958 148.405 24.3216C151.007 24.3193 153.609 24.3205 156.211 24.3205C153.382 27.7524 150.551 31.1821 147.721 34.6128C150.651 38.5443 153.582 42.4747 156.511 46.4062C153.896 46.4062 151.281 46.4062 148.664 46.4062C146.091 42.8191 143.519 39.231 140.946 35.6439C140.944 39.231 140.945 42.818 140.945 46.4062C138.729 46.4062 136.514 46.4062 134.298 46.4062C134.298 35.5424 134.298 24.6775 134.298 13.8137Z" fill="currentColor" />
@@ -24,19 +29,19 @@
 
   <!-- Categories -->
   <nav class="flex items-center space-x-6 font-base">
-    <a href="/kuulutused/kaamerad" class={`${$page.path === '/kuulutused/kaamerad' ? 'text-gray-200' : 'text-gray-600'} uppercase font-bold font-base text-sm tracking-wider hover:text-gray-200 transition-colors`}>
+    <a href="/kuulutused/kaamerad" class={`${isActive('/kuulutused/kaamerad') ? 'text-gray-200' : 'text-gray-500'} uppercase font-bold font-base text-sm tracking-wider hover:text-gray-200 transition-colors`}>
       Kaamerad
     </a>
 
-    <a href="/kuulutused/objektiivid" class={`${$page.path === '/kuulutused/objektiivid' ? 'text-gray-200' : 'text-gray-600'} uppercase font-bold font-base text-sm tracking-wider hover:text-gray-200 transition-colors`}>
+    <a href="/kuulutused/objektiivid" class={`${isActive('/kuulutused/objektiivid') ? 'text-gray-200' : 'text-gray-500'} uppercase font-bold font-base text-sm tracking-wider hover:text-gray-200 transition-colors`}>
       Objektiivid
     </a>
 
-    <a href="/kuulutused/statiivid" class={`${$page.path === '/kuulutused/statiivid' ? 'text-gray-200' : 'text-gray-600'} uppercase font-bold font-base text-sm tracking-wider hover:text-gray-200 transition-colors`}>
+    <!-- <a href="/kuulutused/statiivid" class={`${isActive('/kuulutused/statiivid') ? 'text-gray-200' : 'text-gray-500'} uppercase font-bold font-base text-sm tracking-wider hover:text-gray-200 transition-colors`}>
       Statiivid
-    </a>
+    </a> -->
 
-    <a href="#" class="text-gray-600 transition-colors hover:text-gray-200">
+    <a href="#" class="text-gray-500 transition-colors hover:text-gray-200">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>

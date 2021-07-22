@@ -20,22 +20,22 @@
 
     <!-- Tags -->
     <div class="mt-2 space-x-2">
-      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-green-500">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-500 border border-gray-700 transition-colors group-hover:text-green-500">
         {conditionLabels[listing.condition]}
       </span>
-      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-green-500">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-500 border border-gray-700 transition-colors group-hover:text-green-500">
         {listing.brand}
       </span>
 
-      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-green-500">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-500 border border-gray-700 transition-colors group-hover:text-green-500">
         {listing.info.focal_length}mm
       </span>
 
-      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-green-500">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-500 border border-gray-700 transition-colors group-hover:text-green-500">
         f/{listing.info.aperture}
       </span>
 
-      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-green-500">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-500 border border-gray-700 transition-colors group-hover:text-green-500">
         {listing.info.mount}
       </span>
     </div>

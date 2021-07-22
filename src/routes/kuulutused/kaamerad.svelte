@@ -20,79 +20,110 @@
   export let listings
 </script>
 
-<!-- Navigation -->
-<Nav/>
+<!-- Header -->
+<header class="max-w-6xl mx-auto px-4">
 
-<!-- Filters -->
-<header class="bg-gray-800">
-  <div class="max-w-6xl mx-auto px-4 pb-4">
+  <!-- Nav -->
+  <Nav/>
 
-    <div class="flex space-x-4">
+  <!-- Filters -->
+  <div class="flex space-x-4">
 
-      <!-- Brand -->
-      <div class="flex-1 bg-gray-900 rounded-lg px-4 py-3">
-        <div class="uppercase font-bold font-base text-sm tracking-wider text-gray-600">
-          Tootja
-        </div>
-        <div class="flex space-x-2 mt-1">
-          <div class="px-2 py-0.5 rounded-md font-medium text-lg text-gray-200 bg-gray-800">Canon</div>
+    <!-- Brand -->
+    <div class="flex-1 group shadow bg-gray-800 rounded-lg px-4 py-3 border-t border-gray-700 cursor-pointer">
+      <div class="mb-1 uppercase font-bold font-base text-sm tracking-wider text-gray-500 transition-colors group-hover:text-gray-200">
+        Tootja
+      </div>
+      <div class="flex space-x-2 px-2 py-0.5 rounded-md bg-black border-b border-gray-700">
+        <div class="text-lg font-medium text-gray-200">
+          Canon
         </div>
       </div>
-
-      <!-- Type -->
-      <div class="bg-gray-900 rounded-lg px-4 py-3">
-        <div class="uppercase font-bold font-base text-sm tracking-wider text-gray-600">
-          Tüüp
-        </div>
-        <div class="flex space-x-2 mt-1">
-          <div class="px-2 py-0.5 rounded-md font-medium text-lg text-gray-200 bg-gray-800">Hübriid</div>
-        </div>
-      </div>
-
-      <!-- Sensor -->
-      <div class="bg-gray-900 rounded-lg px-4 py-3">
-        <div class="uppercase font-bold font-base text-sm tracking-wider text-gray-600">
-          Sensor
-        </div>
-        <div class="flex space-x-2 mt-1">
-          <div class="px-2 py-0.5 rounded-md font-medium text-lg text-gray-200 bg-gray-800">Täiskaader</div>
-        </div>
-      </div>
-
-      <!-- Megapixels -->
-      <div class="bg-gray-900 rounded-lg px-4 py-3">
-        <div class="uppercase font-bold font-base text-sm tracking-wider text-gray-600">
-          Megapikslid
-        </div>
-        <div class="flex space-x-2 mt-1">
-          <div class="py-0.5 rounded-md font-medium text-lg text-gray-200">20</div>
-          <div class="py-0.5 rounded-md font-medium text-lg text-gray-600">–</div>
-          <div class="py-0.5 rounded-md font-medium text-lg text-gray-200">30</div>
-          <div class="py-0.5 rounded-md font-medium text-lg text-gray-600">mp</div>
-        </div>
-      </div>
-
-      <!-- Mount -->
-      <div class="bg-gray-900 rounded-lg px-4 py-3">
-        <div class="uppercase font-bold font-base text-sm tracking-wider text-gray-600">
-          Bajonett
-        </div>
-        <div class="flex space-x-2 mt-1">
-          <div class="px-2 py-0.5 rounded-md font-medium text-lg text-gray-200 bg-gray-800">Canon RF</div>
-          <div class="px-2 py-0.5 rounded-md font-medium text-lg text-gray-200 bg-gray-800">Canon EF</div>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Type -->
+    <div class="w-40 group shadow bg-gray-800 rounded-lg px-4 py-3 border-t border-gray-700 cursor-pointer">
+      <div class="mb-1 uppercase font-bold font-base text-sm tracking-wider text-gray-500 transition-colors group-hover:text-gray-200">
+        Tüüp
+      </div>
+      <div class="flex space-x-2 px-2 py-0.5 rounded-md bg-black border-b border-gray-700">
+        <div class="text-lg font-medium text-gray-200">
+          Hübriid
+        </div>
+      </div>
+    </div>
+
+    <!-- Mount -->
+    <div class="w-64 group shadow bg-gray-800 rounded-lg px-4 py-3 border-t border-gray-700 cursor-pointer">
+      <div class="mb-1 uppercase font-bold font-base text-sm tracking-wider text-gray-500 transition-colors group-hover:text-gray-200">
+        Bajonett
+      </div>
+      <div class="flex space-x-2 px-2 py-0.5 rounded-md bg-black border-b border-gray-700">
+        <div class="text-lg font-medium text-gray-200">
+          <span>Canon RF</span>
+          <span class="text-gray-500">,</span>
+        </div>
+        <div class="text-lg font-medium text-gray-200">
+          Canon EF
+        </div>
+      </div>
+    </div>
+
+    <!-- Sensor -->
+    <div class="w-40 group shadow bg-gray-800 rounded-lg px-4 py-3 border-t border-gray-700 cursor-pointer">
+      <div class="mb-1 uppercase font-bold font-base text-sm tracking-wider text-gray-500 transition-colors group-hover:text-gray-200">
+        Sensor
+      </div>
+      <div class="flex space-x-2 px-2 py-0.5 rounded-md bg-black border-b border-gray-700">
+        <div class="text-lg font-medium text-gray-200">
+          Täiskaader
+        </div>
+      </div>
+    </div>
+
+    <!-- Megapixels -->
+    <div class="w-40 group shadow bg-gray-800 rounded-lg px-4 py-3 border-t border-gray-700 cursor-pointer">
+      <div class="mb-1 uppercase font-bold font-base text-sm tracking-wider text-gray-500 transition-colors group-hover:text-gray-200">
+        Megapikslid
+      </div>
+      <div class="flex font-medium text-lg space-x-1">
+        <div class="px-2 py-0.5 text-gray-200 rounded-md bg-black border-b border-gray-700 transition-colors">20</div>
+        <div class="py-0.5 text-gray-500">–</div>
+        <div class="px-2 py-0.5 text-gray-200 rounded-md bg-black border-b border-gray-700 transition-colors">30</div>
+        <div class="py-0.5 text-gray-500">mp</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="flex items-center justify-between">
+
+    <!-- Email -->
+    <a href="#" class="group flex items-center pt-4 font-base text-gray-600 transition-colors hover:text-green-500">
+      <svg xmlns="http://www.w3.org/2000/svg" class="relative top-[-1px] h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
+      </svg>
+      <span class="text-gray-500 transition-colors group-hover:text-gray-200">Telli uued kuulutused enda e-mailile</span>
+    </a>
+
+    <!-- Sort -->
+    <a href="#" class="group flex items-center pt-4 font-base text-gray-600 transition-colors hover:text-green-500">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
+      </svg>
+      <span class="text-gray-500 transition-colors group-hover:text-gray-200">Uuemad ees</span>
+    </a>
 
   </div>
 </header>
 
 <!-- Listings -->
-<div class="max-w-6xl mx-auto px-4">
-  <div class="divide-y divide-gray-800 mt-4">
-    {#each listings as listing}
-      <ListingRow {listing} />
-    {/each}
+<div class="bg-gray-800 border-t border-gray-700 mt-4">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="divide-y divide-gray-700">
+      {#each listings as listing}
+        <ListingRow {listing} />
+      {/each}
+    </div>
   </div>
 </div>

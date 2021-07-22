@@ -1,3 +1,11 @@
-<div class="max-w-6xl mx-auto px-4">
-  Hello
-</div>
+<script>
+  import Nav from '$lib/components/Nav.svelte'
+</script>
+
+<!-- Header -->
+<header class="max-w-6xl mx-auto px-4">
+
+  <!-- Nav -->
+  <Nav/>
+
+</header>
