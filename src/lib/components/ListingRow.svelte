@@ -2,7 +2,9 @@
   export let listing
 
   let conditionLabels = {
-    used: 'Kasutatud'
+    new: 'Uus',
+    used: 'Kasutatud',
+    broken: 'Katkine',
   }
 </script>
 
@@ -12,17 +14,29 @@
   <div class="flex-1">
 
     <!-- Name -->
-    <div class="text-4xl font-bold font-space">
+    <div class="text-4xl font-bold font-space text-gray-200 group-hover:text-white group-visited:text-gray-500 transition-colors">
       {listing.name}
     </div>
 
     <!-- Tags -->
     <div class="mt-2 space-x-2">
-      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-gray-400">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-green-500">
         {conditionLabels[listing.condition]}
       </span>
-      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-gray-400">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-green-500">
         {listing.brand}
+      </span>
+
+      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-green-500">
+        {listing.info.focal_length}mm
+      </span>
+
+      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-green-500">
+        f/{listing.info.aperture}
+      </span>
+
+      <span class="inline-flex items-center px-2 py-0.5 rounded-md font-medium text-gray-600 border border-gray-800 transition-colors group-hover:text-green-500">
+        {listing.info.mount}
       </span>
     </div>
 
