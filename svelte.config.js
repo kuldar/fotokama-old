@@ -1,9 +1,9 @@
 import preprocess from 'svelte-preprocess'
-import adapter from '@sveltejs/adapter-netlify'
+import netlify from '@sveltejs/adapter-netlify'
 
 const config = {
   kit: {
-    adapter: adapter(),
+    adapter: netlify(),
     target: '#svelte'
   },
   preprocess: [preprocess({ 'postcss': true })]
